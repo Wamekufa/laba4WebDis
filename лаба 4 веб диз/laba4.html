@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блочная композиция сайта</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+        
+        /* Шапка сайта */
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 15px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        
+        nav a:hover {
+            background: #3498db;
+            border-radius: 5px;
+        }
+        
+        /* Основной контент */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        section {
+            background: white;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        /* Блоки услуг */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .service-item {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        /* Блоки портфолио */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .portfolio-item {
+            background: #ecf0f1;
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        /* Подвал */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .services {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <h1>Мой сайт</h1>
+    </header>
+    
+    <!-- Навигация -->
+    <nav>
+        <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Основной контент -->
+    <main>
+        <!-- Секция "О нас" -->
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы - современная компания, занимающаяся разработкой веб-сайтов и приложений. Наша команда состоит из опытных специалистов, готовых реализовать любые ваши идеи.</p>
+        </section>
+        
+        <!-- Секция "Услуги" -->
+        <section id="services">
+            <h2>Наши услуги</h2>
+            <div class="services">
+                <div class="service-item">
+                    <h3>Веб-разработка</h3>
+                    <p>Создание современных и функциональных веб-сайтов</p>
+                </div>
+                <div class="service-item">
+                    <h3>Дизайн</h3>
+                    <p>Разработка уникального и привлекательного дизайна</p>
+                </div>
+                <div class="service-item">
+                    <h3>Поддержка</h3>
+                    <p>Техническая поддержка и обслуживание сайтов</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Секция "Портфолио" -->
+        <section id="portfolio">
+            <h2>Наши работы</h2>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <h3>Корпоративный сайт</h3>
+                    <p>Сайт для крупной компании с системой управления</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Интернет-магазин</h3>
+                    <p>Полнофункциональный магазин с онлайн-оплатой</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Секция "Контакты" -->
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Телефон: +375 (29) 123-45-67</p>
+            <p>Email: info@mysite.com</p>
+            <p>Адрес: г. Гродно, ул. Примерная, 123</p>
+        </section>
+    </main>
+    
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2023 Мой сайт. Все права защищены.</p>
+    </footer>
+</body>
+</html>
